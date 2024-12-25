@@ -12,7 +12,7 @@ interface ReportResult {
   };
 }
 
-export const generateReport = async (reportId: string): Promise<ReportResult> => {
+export const generateReport = async (reportId: any): Promise<ReportResult> => {
   try {
     const report = await Report.findById(reportId);
     if (!report) {
